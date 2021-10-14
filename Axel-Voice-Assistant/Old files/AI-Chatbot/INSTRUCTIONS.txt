@@ -1,0 +1,60 @@
+These are the instructions for using Chatbot. Sorry, but these instructions are pretty long
+I'm working on a build that isn't as annoying but for now we gotta work with this. thanks
+for doing this for me :)
+If you have done steps 1-5 before, skip straight to step 6
+
+1) Download Python (if you don't have it already): https://www.python.org/downloads/ 
+
+2) Run the installer, if it asks you, tick the box that says 'add to environmental vars'
+or 'add to PATH'
+
+If you forgot to do that the first time, rerun the python installer, and click modify, and hit 
+next until you see a tick box that will ask to add to environmental vars or PATH, tick
+that and install
+
+3) Right click the windows symbol on the bottom left and open powershell. Type the following
+commands:
+pip install chatterbot==1.0.4
+[Press enter and wait for that to finish downloading, it'll be done when '>' this shows
+up at the end]
+pip install pytz
+
+4) This part is very tricky. Make sure you have the script compat.py ready to drag, it's 
+inside the AI chatbot folder
+
+Open file explorer, and go to this address:
+C:\Users\<Admin>\AppData\Local\Programs\Python\Python39\Lib\site-packages\sqlalchemy\util
+Admin is the main user of the computer. If you wanna check who Admin is, go to:
+C->Users and see the folders that has the list of users. Copy the name of the one you think
+is the admin user, and paste it into the Admin field up above.
+
+For example, my admin user is named nusai, so the address would be
+C:\Users\nusai\AppData\Local\Programs\Python\Python39\Lib\site-packages\sqlalchemy\util
+
+Copy that link into the address of your file explorer. Press enter, you should find yourself
+in a folder. You'll see a bunch of .py files like init.py, compat.py, etc. We wanna
+focus on compat.py. Remember I gave you a copy of compat.py, it's inside the AI Chatbot
+folder, drag that compat.py into this one, it'll ask if you wanna replace, say yes
+
+5) Finally, go back to the AI chatbot folder, you should see the script chatbot-test.py, 
+and a folder called Learning as well as some other stuff. Open the learning folder and
+check memoryToSend.txt, make sure the first time you run this that this is empty. If it isn't
+empty just CTRL+A and delete everything, make sure to save
+
+Then in user.txt, replace my name with your name. Keep Name: tho and make sure you don't
+add a space between the : and ur name.
+
+For example, if Roy is using this you would have
+Name:Roy
+This is how Axel will identify you
+
+6) FINALLY FINALLY, get out of the learning folder and go back to just the Ai Chatbot 
+folder. While holding left shift, right click the whitespace inside the folder. You'll
+see in the options that show up, one of them is 'open windows powershell here'. Click that
+and you'll see the powershell appear. Then type the following command:
+
+python chatbot-test.py
+
+And it should open, you'll know it's good when you see your name at the bottom, now you cna
+type something and Axel will respond as best as it can, make sure to visit the README.txt
+file :)

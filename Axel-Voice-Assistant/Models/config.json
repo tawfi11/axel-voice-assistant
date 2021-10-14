@@ -1,0 +1,6 @@
+{
+    "CSV TRAIN DATA" : "Spotify/spotifyPhraseState.csv",
+    "STATE TRAIN DATA" : "Spotify/spotifyPhrases.txt",
+    "STATE TEST" : "Spotify.txt",
+    "MODEL NAME" : "Spotify"
+}

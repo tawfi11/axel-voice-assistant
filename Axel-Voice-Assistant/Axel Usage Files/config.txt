@@ -1,0 +1,13 @@
+#The name Axel will call you
+Name:Nusair
+
+#Your spotify developers ID
+Spotify-ID:4d69a1fdddec4723a77d7060d535185d
+Spotify-Secret:61be34f6da764189a27e1471f4b16c96
+
+#your spotify username
+Spotify-Username:Nusair Islam
+
+#Gmail information
+Gmail-Address:nusair11@gmail.com
+Gmail-Password:zcaiskihxkdexpfy

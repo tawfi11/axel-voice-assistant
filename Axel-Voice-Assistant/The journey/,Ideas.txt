@@ -1,0 +1,41 @@
+Get to know user:
+ - Use valence and energy statistic of spotify to find if the user is happy or sad
+
+Recognize emoji names
+
+Conversations
+
+Scheduled tasks
+
+Multiple tasks in one command (maybe seperate by 'and then' or 'then')
+
+Scare people
+
+Utilize netflix
+
+What to wear
+
+Create an email filtering system
+
+Integrate with auto-email, and FB messaging system
+
+Simulate key presses so it can autotype for you
+
+Get weather data
+
+Tie in with Twilio text message app, maybe buy premium so you can send messages
+
+Add a chatbot to Axel so he can talk
+
+Maybe add a voice game people can play 
+
+Translate text
+
+Create a diary
+
+SHAZAM!
+
+Spotify:
+- Add songs to a playlist
+
+Add random pauses, or 'uhm' detection

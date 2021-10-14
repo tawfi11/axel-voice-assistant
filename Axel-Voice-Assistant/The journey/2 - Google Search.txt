@@ -1,0 +1,17 @@
+Flow:
+
+1) Get rid of 'on google', and potentially 'for me'
+2) See if the user used 'search up' at start of query, strip 'search/look up', strip that occurence
+3) If not, see if user started words with 'search' or 'look', strip that occurence
+4) See if user ended query with 'up' (search pokemon up on google), UNLESS 'up' is the only string left (if
+user is searching the 2009 critically acclaimed masterpiece, 'UP')
+5) IF after all stripping, the search says 'something' (search something up on google for me), Axel prompts
+the user for what it wants to search up, otherwise, Axel will search up whatever is left
+============================================================================================================
+FUNCTIONS - Phrase(s):
+
+ON GOOGLE: Key phrase needs to exist
+
+SEARCH/LOOK: Checks for this phrase in conjuction 
+
+SOMETHING: If after all stripping, the user just said 'something' it will ask user what to look up

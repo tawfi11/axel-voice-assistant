@@ -1,0 +1,18 @@
+Used chatterbot to create some semblance of learning
+
+Axel acts like a dumbbass who can't talk properly, so Axel will memorize things the user
+said and its response into memory. Before thinking of a response it will scower its memory
+looking to see if it encountered this prompt before and see if it's kinda similar, this
+lets me go in and change its responses to some stuff.
+
+Axel has 2 forms of memory: memory (short term), memoryLongTerm (long term). Long term 
+memory holds everything Axel has ever been taught, whereas normal memory is capped at 300
+and I can play around with it.
+
+Future plans:
+- Right now Axel only tests for strings and the corresponding reply, next Axel will test
+for strings and what was said before to see if there's a correlation
+- Axel creates a user profile it is talking too. It stores it in a .txt file
+- The mood of the user is constantly tested (since mood changes). Axel will change certain
+responses depending on mood. 
+- Use NLTK to learn and actually parse strings. It seems very powerful

@@ -1,0 +1,59 @@
+#OPEN APP (0)
+open spotify,0
+run spotify,0
+start spotify,0
+
+#PLAY SONG(1):
+play 1,1
+play 1 by 2,1
+play 2's 1,1
+
+#PLAY PLAYLIST(2):
+play 4 playlist,2
+play playlist 4,2
+play 1 in 4 playlist,2
+play playlist 1 on shuffle,2
+
+#PLAY ARTIST(3):
+play 2's songs,3
+play songs by 2,3
+play music by 2,3
+play 2's music,3
+play 2's music on shuffle,3
+play songs by 2 on shuffle,3
+
+#PLAY ALBUM(4):
+play 1 in album 3,4
+play 3 album by 2,4
+play 3 album,4
+play album 3,4
+play 2's album 3,4
+play 2's album 3 on shuffle,4
+play 1 album on shuffle,4
+play 3 album by 2 on shuffle,4
+
+#ADD TO QUEUE(5):
+add 1 to queue,5
+add 1 by 2 to queue,5
+
+#SHUFFLE(6):
+turn on shuffle,6
+put this on shuffle,6
+turn off shuffle,6
+stop shuffle,6
+stop playing on shuffle,6
+stop shuffling,6
+
+#REPEAT(7):
+turn on repeat,7
+put this 1 on repeat,7
+turn off repeat,7
+stop repeat,7
+stop playing repeat,7
+play this 1 on repeat,7
+stop repeating,7
+
+#<song> 1
+#<artist> 2
+#<album> 3
+#<playlist> 4

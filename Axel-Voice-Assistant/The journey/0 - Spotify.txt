@@ -1,0 +1,36 @@
+Flow:
+
+1) Auto open spotify
+2) check if phrase wants to change state of spotify (Shuffle, pause/play, repeat, etc.),
+if so, return 
+
+speech --> Model --> play artist, song, playlist, or album? (check if play is in there or elsee turn) --> Model --> Find regex template to use
+===========================================================================================
+FUNCTIONS - Phrase(s):
+*NOTE: upper/lowercase doesn't matter*
+
+OPEN - 'open spotify'
+
+SHUFFLE - 'Shuffle'
+
+GO BACK - 'go back', 'previous'
+
+REPEAT - 'repeat'
+
+PLAY TOP ARTIST/TRACK - 'my favorite <artist/track>', 'my top <artist/track>',
+'my most listened to <artist/track>'
+
+PLAY SONGS SIMILAR - 'songs similar', 'songs like this', 'similar songs', 
+'like the one playing'
+
+ADD TO QUEUE - startswith('add','put', 'at') && endswith('queue, 2q, on queue')
+
+ADDS TO PLAYLIST - 'add' && 'playlist'
+
+PLAY ALBUM - 'album <name> by <artist>', '<name> album'
+
+PLAY PLAYLIST - 'playlist' && <playlist name>
+
+PLAY ARTIST - 'artist' && <artist name>
+
+PLAY SONG - (if not album, playlist, or artist) '<song name> by <artist>', '<song name>'

@@ -1,0 +1,7 @@
+Make a model for the main function, create after deciding the different functions
+
+NOTE about models:
+- Models are cool but big and unecessary sometimes
+- Easy solution: SOME applications are pretty simple, functions that require spotify just have an "on spotify" ending, instead of making a model,
+just look for that
+- Create a model for the PARSE function tho, especially if you want to call spotify commands OTHER than just saying "on spotify" at the end

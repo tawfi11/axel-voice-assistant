@@ -1,0 +1,8 @@
+0: Open Spotify
+1: Play Song
+2: Play Playlist
+3: Play Artist
+4: Play Album
+5: Add to queue
+6: shuffle
+7: repeat

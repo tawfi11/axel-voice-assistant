@@ -1,0 +1,68 @@
+Wednesday, Nov 25, 2020:
+I started trying to teach Axel how to talk. He sucks at it, I used a module called 
+Chatterbot and I realized very quickly it's kinda bad. I thought of a work around to it, 
+give Axel memory. Axel has 2 types of memory: short term and long term. It uses short
+term memory to richen its talking. When a user says something, Axel records the user
+and its reply to memory. Then, I can go into the memory and see what Axel's response was.
+If the response was absolutely bad, I can change it up his 'memory' so that Axel now
+thinks he said something intelligent. When Axel encounters a phrase, he searches thru his
+short-term memory to see if he can use an old reply (or one I gave him) to reply.
+He also has a long term memory which is much more for development, the short term memory is
+capped to around 300, so that it doesn't take him too long to go thru the entire list, but
+his long term memory stores everything. This is so I can completely clear his short term
+memory or play around but still keep what he said in long term. Also started looking at
+NTLK for natural language, and deep learning algorithms. I'm very proud of myself, I set 
+out to do this python project so I can learn AI and make something really cool, and I'm
+having fun (at the expense of school) and I'm very quickly learning. Axel has potential
+to really be something big. Oh yea, also Axel can now use Spotify pretty damn well,
+although it took me a long time since I had to think of every possible way someone would
+talk to Axel. I think using NLTK would be MUCH better for this.
+
+Monday, Nov 16, 2020: 
+I thought of a fantastic idea. So my favorite Marvel superhero is Captain America but
+I really like Iron Man as well. Iron Man's coolest invention is probably his AI,
+Jarvis, Friday, and Edith. What if I made my own. GENIUS! I'm gonna call it Axel
+
+Tuesday, Nov 17, 2020:
+I brainstormed a lot of functions to add to Axel and he already is pretty damn helpful.
+I'm really excited with where Axel is going to go. I also thought of a pseudo-machine
+learning algoritm so Axel can learn from common phrases I say and determine key words 
+to get from that and open programs. Asking my CS friend he said it's a algorithm similar
+to "K-Nearest Neighbours" but different. I'm like fantastic lemme try implementing it.
+
+Wednesday, Nov 18, 2020:
+Insane amounts of progress have been done, many people interested as well. I'm very glad.
+Axel is quickly getting quite useful. I was doing my ELEC 301 project and I had Axel search
+things up for me as I was working, it really does feel like I'm Tony Stark. I also attemped
+implementing my algorithm. It kind of works. So it takes a list of phrases, finds similarities
+between them and counts how many times it encounters a certain word (excluding common words).
+So now I need to get Axel to compile a list of key words and what they do. I'm thinking of 
+also adding a tree-like function. For example, let's say I say "Open spotify and play my
+favorite artist". Maybe Axel will see the words 'spotify' 'play' and 'artist' and think
+he needs to open Spotify, that's the base level. Then he goes one level down and looks
+for key words like 'favorite' and 'artist' and 'play' and realizes he needs to play a song
+from whomever my favorite artist on spotify is, this is the next level. Of course this is
+an oversimplificaiton of how it'll actually go but I think some modeling needs to be done!
+
+Thursday, Nov 19, 2020:
+So I was working out how to get Axel to send FB messages, a couple of issues came up. First,
+I have 2FA set up on my FB so I used an API to login and it does but immediately asks
+me for a 2FA code. This doesn't sound too bad but it's incredibly annoying if it asks for
+one everytime Axel is booted. I managed to find a way to retrieve cookies from my session,
+but Axel quickly deletes them when the program closes. Idea: I store the cookies on a .txt
+file so when Axel needs to retrieve them he can! Testing and BIG SUCCESS. Axel can now
+easily enter my Facebook without the need for 2FA. Fantastic.
+
+Friday, Nov 20, 2020:
+One bug I have been facing is that Axel sometimes truncates the first part of my request,
+so if I ask "what is Naruto" Axel will think I said "is Naruto". I thought it had something
+to do with the speech recognition but today I realized it's because the program goes on
+hold when Axel talks. So I sped up the rate Axel talks and removed all punctuation marks
+from his speech so he doesn't take "pauses" and halt the program for no reason. That worked
+wonderfully. Next bug is that some keywords Axel cannot look up on Wikipedia. So for example
+Axel can see up Coulomb on wiki but not Naruto. And he takes "One Piece" and "one peace" 
+giving me a wrong answer. I found the solution is that the Wikipedia api tries to parse
+strings and for some reason Naruto doesn't parse and One Piece parses incorrectly. Now
+I added a "u'" character to all strings on wiki searches and it works just fine. Additioanlly,
+I completely forgot Axel was running in the background until I called him and he answered
+right away. Axel is doing a great job of being a background voice assistant

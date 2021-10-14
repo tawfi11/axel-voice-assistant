@@ -1,0 +1,20 @@
+#Names of recipients, in order
+Names:
+
+#Emails of recipient, in order
+To:
+
+#Subject of email
+Subject:
+
+#Opening salutation of email
+Salutation:
+
+#Closing message of email
+Closing:
+
+#The name that will sign off email
+Gmail-Signoff-Name:Nusair Islam
+
+#Body of email
+Body:

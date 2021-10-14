@@ -1,0 +1,16 @@
+Flow:
+1) See if email needs to be opened (student, email, etc.), if so, return
+2) Ask user if email to be composed is in the 'email.txt' file
+Yes:
+	i) Get To, Subject, and body from file, anything that is not there, ask from user
+No:
+	i) Ask for To (must be in contacts.txt)
+	ii) Ask for subject
+	iii) Ask for Saluation/Farewall message
+	iv) Ask for number of paragraphs
+	v) If the user stops talking for 1s or so, it adds a period and keeps on writing
+	vi) If the user says paragraph, or line break, the program will create a
+	new paragraph, or if the user says send/finished email, the program will send it.
+	Else, paragraph breaks happen every 4-6 sentences
+	vii) Repeat To (contact names, if possible), subject, body.
+	viii) SEND when user confirms it is good!

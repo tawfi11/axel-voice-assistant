@@ -1,0 +1,7 @@
+Create a vector of important words
+
+Create a k-nearest neighbour algorithm that uses test data to say that phrases with 'x'
+important words and weights are in this category
+
+When axel encounters a phrase it hasn't seen before, it will go thru the k-nearest
+neighbours thing and figure it out!

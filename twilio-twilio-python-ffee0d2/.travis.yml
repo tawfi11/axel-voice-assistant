@@ -1,0 +1,40 @@
+dist: xenial
+language: python
+python:
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
+- '3.9'
+services:
+- docker
+install:
+- pip install virtualenv --upgrade
+- make install
+- make test-install
+script:
+- make test
+deploy:
+- provider: script
+  script: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin && make docker-build && make docker-push
+  skip_cleanup: true
+  on:
+    tags: true
+    python: '3.6'
+- provider: pypi
+  skip_cleanup: true
+  user: __token__
+  password: "$PYPI_TOKEN"
+  on:
+    tags: true
+    python: '3.6'
+notifications:
+  slack:
+    if: branch = main
+    on_pull_requests: false
+    on_success: never
+    on_failure: change
+    rooms:
+      secure: FbHzWXjWnpy97v4bmm75T15D0zLBdunEQ3l+w7LqC6cR2nCYOLqcIs2VvwJXXpSbSu9CVzRdMQYfsS7AYi+Fakg93nQOLEtkrhkYiq3yRKXsFVICaJOWPUQbZOdouTKtYZF/0P6FzjdBxbZeD7UW12FKiQ+dL9ncBrgGJExrqFo=
