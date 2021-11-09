@@ -7,7 +7,7 @@ from search import search
 from openlink import gotoWebsite
 from difflib import SequenceMatcher
 import pandas as pd
-from pysparkModels import chooseState
+#from pysparkModels import chooseState
 
 def getKeyWordList(i): #Function get get the list of KeyWords in interest of looking less ugly
     arrayOfWords = [

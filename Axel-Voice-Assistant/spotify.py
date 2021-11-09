@@ -143,11 +143,37 @@ def addToQueue(speech, client, preprocessed=False): ###! ADD TO QUEUE !###
                     speech = f"{songName} {suppName}"
                     found = True
                     break 
-        if found:       
+        if found:
             searchResults = client.search(speech,1,0,"track")
-            track = searchResults['tracks']['items'][0]['uri']
+            if searchResults['tracks']['items'] == []: 
+                found = False
+                searchResults = client.search(songName,10,0,"track")
+                for result in searchResults['tracks']['items']:
+                    for artist in result['artists']:
+                        if suppName.lower() in artist['name'].lower() or SequenceMatcher(None, suppName, artist['name']).ratio() >= 0.8:
+                            found = True
+                            break
+                    if found :
+                        track = result['uri']
+                        songName = result['name']
+                        artistName = result['artists'][0]['name']
+                        break
+                    
+                    album = result['album']
+                    if album['album_type'] == 'single': continue
+                    if suppName.lower() in album['name'].lower() or SequenceMatcher(None, suppName, album['name']).ratio() >= 0.8:
+                        found = True
+                    if found :
+                        track = result['uri']
+                        songName = result['name']
+                        artistName = result['artists'][0]['name']
+                        break
+            else:
+                track = searchResults['tracks']['items'][0]['uri']
+                songName = searchResults['tracks']['items'][0]['name']
+                artistName = searchResults['tracks']['items'][0]['artists'][0]['name']
             client.add_to_queue(track)
-            return f"added {searchResults['tracks']['items'][0]['name']} by {searchResults['tracks']['items'][0]['artists'][0]['name']} to queue"
+            return f"added {songName} by {artistName} to queue"
         
         return "Could not find song to add to queue"
     except Exception as e:
@@ -468,9 +494,13 @@ def getTrackURI(query, nlp, client): ###! FINDS TRACK URIS GIVEN A QUERY FOR A S
     querySplit = query.split()
     requestList = []
     requestList.append(query)
-
+    punctuationCount = 0
      ##* This part of the code finds requests based on artist, song *## 
     for i, token in enumerate(doc):
+        i -= punctuationCount
+        if token.text.lower() in ['.', ',', '!']:
+            punctuationCount += 1
+            continue
         if token.pos_ == 'ADP' and token.tag_ == 'IN' and token.text.lower() in ['by', 'from']:
             querySplit[i] = 'ADP'
             requestList.append(' '.join(querySplit))
@@ -1097,6 +1127,5 @@ def parseSpotify(speech = "", engine=None, source=None, r=None,user=None): ###! 
         return f"{returnMsg}"
     
     except Exception as e: return f"Error encountered processing spotify request: {e}"
-
-
-while True: print(parseSpotify(speech=input('what do you wanna do: ')))
+    
+parseSpotify("add forever and more by role model to queue")
