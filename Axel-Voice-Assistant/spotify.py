@@ -82,7 +82,7 @@ def alterSpotifyState(speech, client): ###! CREATE ALTER SPOTIFY STATE !###
             client.previous_track()
             return ("Playing previous track", speech, 'went back a track')
         
-        if any(phrase in speech for phrase in ['skip track', 'next track', 'skip song', 'skip track']):
+        if any(phrase in speech for phrase in ['skip track', 'skip this', 'play next', 'next track', 'skip song', 'skip track']):
             client.next_track()
             return ("Playing next track", speech, 'skipped to next track')
 
