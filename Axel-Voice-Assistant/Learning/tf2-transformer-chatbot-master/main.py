@@ -1,4 +1,4 @@
-import argparse
+import argparse, os, sys
 import tensorflow as tf
 
 tf.random.set_seed(1234)
@@ -100,6 +100,9 @@ def main(hparams):
   model.fit(dataset, epochs=hparams.epochs)
 
   evaluate(hparams, model, tokenizer)
+  
+  path = os.path.join(os.path.dirname(sys.argv[0]), 'chatbot')
+  model.save(path)
 
 
 if __name__ == '__main__':
